@@ -1,6 +1,6 @@
 import React from "react";
 import _ from "lodash";
-import { Link } from "react-router-dom";
+import Link from "pawjs/src/components/link";
 
 export default class BlogListing extends React.Component {
 

@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {connect} from "react-redux";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+import Link from "pawjs/src/components/link";
 
 const Header = (props) => {
   return (
@@ -40,12 +40,25 @@ const Header = (props) => {
             Contact
           </Link>
         </li>
+        <li className="nav-item">
+          <Link
+            className={classNames("nav-link", {active: props.url === "/progressive-image-rendering"})}
+            to="/progressive-image-rendering"
+          >
+            Progressive Image Rendering
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            className={classNames("nav-link", {active: props.url === "/counter"})}
+            to="/counter"
+          >
+            Redux Counter
+          </Link>
+        </li>
       </ul>
     </div>
   );
 };
-Header.propTypes = {
-  url: PropTypes.string.isRequired
-};
 
-export default Header;
+export default connect(state => { return {url: state.router.location.pathname}; })(Header);

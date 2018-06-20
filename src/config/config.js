@@ -2,6 +2,14 @@ export default {
   server: {
     port: 3003,
   },
+  hsts: {
+    enabled: true,
+    // mageAge: Must be at least 18 weeks to be approved by Google, but we are setting it to 1 year
+    maxAge: 31536000,
+    // Must be enabled to be approved by Google
+    includeSubDomains: true,
+    preload: false,
+  },
   pwa: {
     "name": "React Redux PWA Seo-ed",
     "short_name": "RRPS",

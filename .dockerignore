@@ -60,15 +60,9 @@ typings/
 
 # WebStorm configurations
 .idea
+npm-debug.log
 
-# Ignore the etc folders created by
-etc/
+# Do not add src while creating a docker file as we are going to mount it
+src
 
-# Do not add dist to git
-dist
-
-# ignore the config assets as its generated runtime and thus should notbe included in git
-src/config/assets.js
-
-# Ignore sass cache
 .sass-cache

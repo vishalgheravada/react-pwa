@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import Fold from "../../../core/components/fold" ;
-import ReactLogo from "../../../resources/images/reactjs.svg";
-import SmallImage from "../../../resources/images/mario-large.png?sizes=100w+200w+400w+800w&placeholder";
-import Picture from "../../../core/components/picture/picture";
+import React, {Component} from "react";
+import Fold from "pawjs/src/components/fold";
+import ReactLogo from "src/resources/images/reactjs.svg";
+import SmallImage from "src/resources/images/mario-large.png?sizes=100w+200w+400w+800w&placeholder";
+import Picture from "pawjs/src/components/picture/picture";
 
 export default class Home extends Component {
   render() {
@@ -20,7 +20,7 @@ export default class Home extends Component {
           magna gravida posuere. Sed at velit at est dictum mollis. Pellentesque
           ullamcorper dapibus nulla, efficitur pharetra nisi sodales ut.
         </p>
-        <Fold>
+        <Fold placeholder={() => <div className="text-center mt-3 mb-3">Loading folded content.. Please wait..</div>}>
           <p>
             Cras at elementum magna. Proin sed vulputate erat. Quisque magna nibh,
             posuere in mattis id, consectetur non nunc. Sed sodales diam risus,
